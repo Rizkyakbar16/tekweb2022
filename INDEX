@@ -1,0 +1,78 @@
+!DOCTYPE html>
+<html>
+    <style>
+        @import url('http://fonts.googleapis.com/css/family=quicksand:400,500&subset=latin-ext');
+body    {
+    padding: 100px;
+    background-image: linear-gradient(-20deg, #8c2b2b 0%, #000000 100%);
+    text-align: center;
+    font-family: 'quicksand', sans-serif;
+}
+ul {
+    margin-left: -45;
+}
+li {
+    list-style: none;
+    display: inline-block;
+}
+.main {
+    width: 800px;
+    height: 520px;
+    background-color: #076f8b;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-radius: 10px;
+    border: 1px solid #e59797'
+}
+.img {
+    background-image: url(IMG.JPG);
+    background-color: #246f87;
+    background-size: cover;
+    border-radius: 100px;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border: 1px solid #19bae2;
+}
+h1 {
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    font-weight: bold;
+    color: #f0070728;
+}
+.text {
+    text-align: center ;
+    font-size: 10px;
+    padding-top: 0px;
+    margin: 0;
+    color: #0e1212;
+}
+p {
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 450px;
+    height: auto;
+    color: #2a5252;
+}
+    </style>
+    <head>
+        <title>Mhd Rizky Akbar</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="img"></div>
+            <h1>Mhd Rizky Akbar</h1>
+            <div class="text"><strong></strong></div>
+            <p>Hallo , Selamat datang di halaman profil page website saya, saya mahasiswa angkatan 2020 
+                yang sedang berkuliah di Universitas Ahmad Dahlan, dari Program Studi Sistem Infromasi.
+                Terimakasih.</p>
+            <ul>      
+            </ul>
+                <li><a href="#"><img src="LINE.PNG" width="25px" height="25px"></a></li>
+                <li><a href="#"><img src="IG.JPG" width="25px" height="25px"></a></li>
+                
+        </div>
+    </body>
+</html>

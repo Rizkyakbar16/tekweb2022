@@ -69,38 +69,38 @@ Vue.createApp({
           atas: [
             {
               n: "Nama",
-              p: "Muhammad Rizky Akbar" 
+              p: "Muhammad Rizky Akbar"
             },
             {
               n: "Tanggal Lahir",
-              p: "asdas"
+              p: "16 Desember 2002"
             },
             {
               n: "Telepon",
-              p: "asdasd"
+              p: "+62 831-6845-9045"
             },
             {
               n: "Kota",
-              p: "asdasd"
+              p: "Pematangsiantar"
             }
 
           ],
           bawah : [
             {
               n: "Umur",
-              p: "Muhammad Rizky Akbar" 
+              p: "20 Tahun"
             },
             {
               n: "Pendidikan",
-              p: "asdawda"
+              p: "Sarjana"
             },
             {
               n: "Hobby",
-              p: "awdawd"
+              p: "Baca Novel"
             },
             {
               n: "Email",
-              p: "awdasda"
+              p: "Kiki.akbar16@gmail.com"
             }
           ]
         },

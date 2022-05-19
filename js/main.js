@@ -141,7 +141,7 @@ Vue.createApp({
     getArtikel () {
       axios
       .get (
-        src="../artikel/artikel.json"
+        "https://raw.githubusercontent.com/Rizkyakbar16/tekweb2022/main/artikel/artikel.json"
       ) 
       .then((res) => {
         console.log(res.data);
@@ -160,7 +160,7 @@ Vue.createApp({
       console.log(artikel);
       axios
         .get(
-          src="../artikel/"+artikel
+          "https://raw.githubusercontent.com/Rizkyakbar16/tekweb2022/main/artikel/"+artikel
         )
         .then((res) => {
           var html = converter.makeHtml(res.data);           

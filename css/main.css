@@ -1,0 +1,311 @@
+html,
+body {
+    margin: 0;
+}
+
+body {
+    --main-color: #0f0f0f;
+    --second-color: #f56c1d;
+    --text-color: #bbbbbb;
+    --text-color-lighter: #eeeeee;
+    --text-color-darker: #8f8f8f;
+    --main-color-darker: #050505;
+    --main-color-lighter: #141414;
+    background-color: var(--main-color-darker);
+    color: var(--text-color);
+}
+
+body::before {
+    content: "";
+    background-image: url(data:image/png;base64,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);
+    background-size:5%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.3;
+    z-index: 1;
+    pointer-events: none;
+}
+
+footer {
+    font-family: 'Cutive Mono', sans-serif;
+    background-color: var(--second-color);
+    color: var(--main-color-darker);
+    height: auto;
+    width: fit-content;
+}
+
+p,
+a,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+}
+
+a:hover {
+    color: var(--text-color-lighter);
+    text-decoration: none;
+    transition: 350ms;
+}
+
+
+
+h1,
+h2,
+h3 {
+    font-family: 'Monument Extended', sans-serif;
+}
+
+h2.garis {
+    display: table;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+}
+
+h2.garis:before,
+h2.garis:after {
+    border-top: 1px solid var(--text-color);
+    content: "";
+    display: table-cell;
+    position: relative;
+    top: 0.5em;
+    width: 50%;
+}
+
+h2.garis:before {
+    right: .5%;
+}
+
+h2.garis:after {
+    left: .5%;
+}
+
+.nav .nav-item a {
+    font-family: 'Monument Extended', sans-serif;
+    font-weight: 400;
+    font-size: smaller;
+    font-style: italic;
+}
+
+.navbar-text svg {
+    position: absolute;
+    pointer-events: none;
+    right: -50px;
+    top: .5em;
+    stroke: var(--second-color);
+}
+
+path {
+
+    stroke-dasharray: 400;
+    stroke-linecap: round;
+    animation-timing-function: ease-in-out;
+    animation: draw 5s infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes draw {
+    from {
+        stroke-dashoffset: 400
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+main {
+    height: 100vh;
+}
+
+.nvb {
+    background-color: var(--main-color);
+}
+
+.bi-boxes {
+    width: 1.4em;
+    height: 1.4em;
+    fill: var(--second-color);
+    margin: auto;
+}
+
+.fade {
+    transition: 650ms;
+}
+
+.container-fluid {
+    padding: 4em 1em 3em;
+}
+
+.col {
+    white-space: normal;
+}
+
+.parNama {
+    position: absolute;
+    background-color: var(--main-color-lighter);
+    bottom: 35%;
+    height: 265px;
+    padding: 0;
+}
+
+.parNama p {
+    font-family: 'Cutive Mono', sans-serif;
+    font-weight: 400;
+    word-spacing: .01rem;
+    padding: 0;
+    margin: 0;
+
+
+}
+
+.aku {
+    text-align: end;
+}
+
+.halo {
+    text-align: left;
+    position: absolute;
+    top: -22px;
+}
+
+.parNama::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid .1rem var(--second-color);
+    bottom: 2em;
+    left: 2em;
+}
+
+.parNama::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid .1rem rgb(51, 51, 51);
+    top: 2em;
+    right: 2em;
+    z-index: -12;
+}
+
+.text-bulet {
+    position: fixed;
+    bottom: -18em;
+    right: 3em;
+    width: 100%;
+}
+
+svg textPath {
+    font-size: 30px;
+    font-family: 'Monument Extended', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    fill: rgb(122, 122, 122);
+
+
+}
+
+
+.nama {
+    font-family: 'Monument Extended', sans-serif;
+    font-size: 150px;
+    line-height: 8rem;
+    /* font-weight: 400; */
+}
+
+.wave,
+.wave2,
+.wave-atas,
+.wave-atas2 {
+    position: fixed;
+}
+
+.wave {
+    z-index: -1;
+    bottom: 0%;
+}
+
+.wave path,
+.wave-atas path {
+    fill: var(--main-color-darker);
+}
+
+.wave2 {
+    z-index: -2;
+    bottom: 0.15%;
+}
+
+.wave2 path,
+.wave-atas2 path {
+    fill: var(--text-color-darker);
+}
+
+.wave-atas2 {
+    z-index: -2;
+    top: 13.15%;
+}
+
+.wave-atas {
+    z-index: -1;
+    top: 13%;
+}
+
+/* bagian about */
+
+p.garis {
+    padding: 0 0 30px;
+    
+}
+
+.konten {
+    border: solid 1px var(--text-color);
+    border-radius: 5px;
+    margin: 0 1rem 2rem 1rem;
+    transition: 300ms;
+}
+
+.konten:focus,
+.konten:hover,
+.konten:after {
+    background-color: var(--main-color);
+    box-shadow: inset -6px 6px 23px 2px #000000;
+}
+
+.k {
+    margin: 0 1rem 2rem 1rem;
+}
+
+.k .a{
+    height: 48%;
+}
+.k .b{
+    height: 48%;
+}
+
+.card {
+    border: solid 1px var(--text-color);
+    border-radius: 5px;
+    margin: 0 1rem 2rem 1rem;
+    transition: 300ms;
+    background-color: #00000000;
+}
+
+.gmb {
+    height: 250px;
+    object-fit: cover;
+}
+
+.tabel {
+    height: 90%;
+}

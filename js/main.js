@@ -1,8 +1,11 @@
+const myApi = "https://ourapi.rzkiy.my.id/";
 Vue.createApp({
   data() {
     return {
       //buat nyimpen data artikelnyaa
       list_artikel: {},
+      list_portofolio: {},
+      list_user: {},
       article: null,
 
       navbar: {
@@ -20,50 +23,12 @@ Vue.createApp({
               j: "Keterampilan",
             },
             {
-              j:"Level",
-            }
-          ],
-          data: [
-            {
-              nama: "Microsoft Word",
-              kemampuan: "Advance"
-            },
-            {
-              nama: "Microsoft Power Point",
-              kemampuan: "Advance"
-            },
-            {
-              nama: "HTML",
-              kemampuan: "Intermediate"
-            },
-            {
-              nama: "CSS",
-              kemampuan: "Intermediate"
-            },
-            {
-              nama: "Javascript",
-              kemampuan: "Intermediate"
-            },
-            {
-              nama: "Java",
-              kemampuan: "Advance"
-            },
-            {
-              nama: "Blender",
-              kemampuan: "Advance"
-            },
-            {
-              nama: "Figma",
-              kemampuan: "Advance"
-            },
-            {
-              nama: "Photoshop",
-              kemampuan: "Intermediate"
+              j: "Level",
             }
           ],
 
-          
-          
+
+
         },
         port: {
           atas: [
@@ -85,7 +50,7 @@ Vue.createApp({
             }
 
           ],
-          bawah : [
+          bawah: [
             {
               n: "Umur",
               p: "20 Tahun"
@@ -106,7 +71,6 @@ Vue.createApp({
         },
 
         j_cerita: "Cerita singkat",
-        cerita: "Aku merupakan seorang Mahasiswa di Universitas Ahmad Dahlan Yogyakarta, yang sekarang sudah berada pada semester 4. Hire me at Contact If u want to make a project with me.",
 
         j_s: "Skills",
         t_s: "Selama 2 tahun berkuliah di Universitas Ahmad Dahlan, aku telah mempelajari beberapa skill, diantaranya yaitu: ",
@@ -120,13 +84,11 @@ Vue.createApp({
           "PHP",
           "VueJs",
           "Axios"
-
         ]
 
       },
 
       home: {
-        nama: "Muhammad Rizky Akbar",
         t1: "Hello, I am",
         t2: "a student from Ahmad Dahlan University, nice to meet you!",
         header: "Let me introduce myself",
@@ -138,32 +100,57 @@ Vue.createApp({
     };
   },
   methods: { //tempat menambahkan fungsi-fungsi
-    getArtikel () {
+    getArtikel() {
       axios
-      .get (
-        "https://raw.githubusercontent.com/Rizkyakbar16/tekweb2022/main/artikel/artikel.json"
-      ) 
-      .then((res) => {
-        console.log(res.data);
-        this.list_artikel = res.data;
-      })
-      .catch((error) => {
-        console.log(error); 
-      });
+        .get(
+          myApi+"artikels"
+        )
+        .then((res) => {
+          console.log(res.data);
+          this.list_artikel = res.data;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
-    ambilMarkdown()
-    {
+    getPortofolio() {
+      axios
+        .get(
+          myApi+"portos"
+        )
+        .then((res) => {
+          console.log(res.data);
+          this.list_portofolio = res.data;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+    getUser() {
+      axios
+        .get(
+          myApi+"users"
+        )
+        .then((res) => {
+          console.log(res.data);
+          this.list_user = res.data;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+    ambilMarkdown() {
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
-      const artikel = urlParams.get('article');        
+      const artikel = urlParams.get('article');
       var converter = new showdown.Converter();
       console.log(artikel);
       axios
         .get(
-          "https://raw.githubusercontent.com/Rizkyakbar16/tekweb2022/main/artikel/"+artikel
+          src = "../artikel/" + artikel
         )
         .then((res) => {
-          var html = converter.makeHtml(res.data);           
+          var html = converter.makeHtml(res.data);
           this.article = html;
           console.log(html);
         })
@@ -174,6 +161,8 @@ Vue.createApp({
   },
   beforeMount() { //fungsi yang dipanggil oleh vue sebelum mount terjadi
     this.getArtikel(),
+    this.getPortofolio(),
+    this.getUser(),
     this.ambilMarkdown()
   },
 }).mount("#app");
